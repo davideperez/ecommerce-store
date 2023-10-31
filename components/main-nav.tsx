@@ -20,7 +20,6 @@ const MainNav: React.FC<MainNavProps> = ({
         label: route.name,
         active:pathname === `/category/${route.id}`
     }))
-    console.log('03- This is the categories/data object from MainNav:', data)
 
     return ( 
         <nav

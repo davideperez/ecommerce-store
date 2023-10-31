@@ -9,7 +9,6 @@ export const revalidate = 0;
 
 const Navbar = async () => {
     const categories = await getCategories();
-    console.log('02- This is the categories object from navbar:', categories)
 
     return ( 
         <div className="border-b">
