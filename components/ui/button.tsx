@@ -6,7 +6,7 @@ export interface ButtonProps
     extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
 
-//?? learn 
+//?? learn forwarRef
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
     className,
     children,
@@ -36,6 +36,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
                 className
             )}
             ref={ref}
+            {...props}
         >
             {children}
         </button>
