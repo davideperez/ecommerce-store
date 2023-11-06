@@ -1,12 +1,14 @@
 "use client"
 
 import Image from "next/image";
+import { MouseEventHandler } from "react";
 import { useRouter } from "next/navigation";
 import { Expand, ShoppingCart } from "lucide-react";
 
 import { Product } from "@/types";
 import Currency from "@/components/ui/currency";
 import IconButton from "@/components/ui/icon-button";
+import usePreviewModal from "@/hooks/use-preview-modal";
 
 interface ProductCard {
     data: Product
@@ -16,9 +18,17 @@ const ProdcutCard: React.FC<ProductCard> = ({
     data
 }) => {
     const router = useRouter();
+    const previewModal = usePreviewModal()
 
     const handleClick = () => {
         router.push(`/product/${data?.id}`)
+    }
+
+    const onPreview: MouseEventHandler<HTMLButtonElement> = (event) => {
+        //the line below is going to override the onClick{handleClick} of the main div.
+        event.stopPropagation();
+
+        previewModal.onOpen(data)
     }
 
     return ( 
@@ -34,11 +44,11 @@ const ProdcutCard: React.FC<ProductCard> = ({
                 <div className="opacity-0 group-hover:opacity-100 transition absolute w-full px-6 bottom-5">
                     <div className="flex gap-x-6 justify-center">
                         <IconButton   
-                            /* onClick={() => {}} */
+                            onClick={onPreview}
                             icon={<Expand size={20} className="text-gray-600"/>}
                         />
                         <IconButton   
-                            /* onClick={() => {}} */
+                            onClick={() => {}}
                             icon={<ShoppingCart size={20} className="text-gray-600"/>}
                         />
                     </div>

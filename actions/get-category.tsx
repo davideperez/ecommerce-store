@@ -8,7 +8,7 @@ const getCategory = async (id: string): Promise<Category> => {
 
     const result = answer.json()
     
-    console.log("This is result:", result)
+    console.log(">>>>>>>>>>>>>>>>>>>>>>> This is result:", result)
     return result;
 }
 
