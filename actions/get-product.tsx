@@ -7,7 +7,6 @@ const getProduct = async (id: string): Promise<Product> => {
 
     //const result = await res.json()
     
-    //console.log("=======> result from getProduct.", res)
     return res.json()
 }
 

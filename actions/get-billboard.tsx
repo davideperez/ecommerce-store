@@ -7,7 +7,6 @@ const getBillboard = async (id: string): Promise<Billboard> => {
 
     //const result = await res.json()
     
-    //console.log("=======> result from getBillboard.", res)
     return res.json()
 }
 
