@@ -8,6 +8,9 @@ import ToastProvider from '@/providers/toast-provider';
 
 import './globals.css';
 
+export const dynamic = 'force-dynamic';
+
+
 const font = Urbanist({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
