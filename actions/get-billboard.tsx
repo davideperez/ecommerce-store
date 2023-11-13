@@ -6,7 +6,7 @@ const getBillboard = async (id: string): Promise<Billboard> => {
     const res = await fetch(`${URL}/${id}`);
 
     //const result = await res.json()
-    
+    console.log("This is billboard res:", res)
     return res.json()
 }
 
