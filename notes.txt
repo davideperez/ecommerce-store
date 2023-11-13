@@ -1,0 +1,7 @@
+//Future Improvments
+
+- Loading States
+- Custom Login Logic. (without clerck)
+- Customers Login. 
+- Product Stock
+- Order Dates
