@@ -14,6 +14,8 @@ const Summary = () => {
     const searchParams = useSearchParams();
     const items = useCart((state) => state.items); //?? why state? aledgely it is because is going to be used in an useEffect..., but why?
     const removeAll = useCart((state) => state.removeAll);
+    console.log("10- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  This is Summary searchParams:", searchParams)
+    console.log("11- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  This is Summary items:", items)
 
     useEffect(()=> {
         if (searchParams.get("success") ) { //?? Who posted that success word on the params?

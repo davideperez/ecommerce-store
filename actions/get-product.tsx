@@ -6,7 +6,7 @@ const getProduct = async (id: string): Promise<Product> => {
     const res = await fetch(`${URL}/${id}`);
 
     //const result = await res.json()
-    console.log("This is getProduct res:", res)
+    console.log("05- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  This is getProduct res:", res)
     
     return res.json()
 }

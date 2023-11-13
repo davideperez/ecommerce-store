@@ -4,8 +4,6 @@ import toast from "react-hot-toast";
 
 import { Product } from "@/types"
 
-//?? Learn exactly how this works.
-
 interface CartStore {
     items: Product[];
     addItem: (data: Product) => void;
@@ -14,7 +12,8 @@ interface CartStore {
 }
 
 const useCart = create(
-    //?? learn more about this lines, the persist dependency..
+    //??: the persist Zustand's middleware, makes the state persistent across different sessions.
+    //??: The persist middleware takes the interface and applies it to the useCart hook. (ish)
     persist<CartStore>((set, get) => ({
         items: [],
         addItem: (data: Product) => {

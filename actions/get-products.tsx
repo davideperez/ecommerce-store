@@ -21,11 +21,11 @@ const getProducts = async (query: Query): Promise<Product[]> => {
             isFeatured: query.isFeatured
         }
     });
-    console.log("This is getProducts url:", url)
+    console.log("06- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  This is getProducts url:", url)
     
     const res = await fetch(url);
    
-    console.log("This is getProducts res:", res)
+    console.log("07- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  This is getProducts res:", res)
 
     return res.json()
 }

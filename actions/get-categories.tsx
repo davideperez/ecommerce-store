@@ -7,7 +7,7 @@ const getCategories = async (): Promise<Category[]> => {
 
     //const result = await res.json()
     //console.log(">>>>>>>>>>>>>>>>>>>>>>> This is result:", result)
-    console.log("This is getCategories res:", res)
+    console.log("02- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  This is getCategories res:", res)
 
     return res.json()
 }
