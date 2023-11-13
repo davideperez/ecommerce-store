@@ -35,6 +35,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
                 //this classes when implementing the component:
                 className
             )}
+            disabled={disabled}
             ref={ref}
             {...props}
         >
