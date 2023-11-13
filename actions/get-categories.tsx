@@ -5,10 +5,10 @@ const URL = `${process.env.NEXT_PUBLIC_API_URL}/categories`;
 const getCategories = async (): Promise<Category[]> => {
     const res = await fetch(URL);
 
-    const result = await res.json()
+    //const result = await res.json()
     //console.log(">>>>>>>>>>>>>>>>>>>>>>> This is result:", result)
     
-    return result
+    return res.json()
 }
 
 export default getCategories;

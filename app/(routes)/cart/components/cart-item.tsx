@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { X } from "lucide-react";
-import { toast }  from "react-hot-toast";
 
 import { Product } from "@/types";
 import useCart from "@/hooks/use-cart";

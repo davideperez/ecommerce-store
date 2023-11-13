@@ -4,8 +4,11 @@ import Container from "@/components/ui/container";
 import getBillboard from "@/actions/get-billboard";
 import ProductList from "@/components/product-list"; 
 
+//export const dynamic = 'force-dynamic';
+
 //?? This is for no cache
 export const revalidate = 0;
+
 
 const HomePage = async () => {
     const products = await getProducts({ isFeatured: true})
